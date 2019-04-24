@@ -26,7 +26,7 @@ The goal of the project is to learn how to fully replace redux with new reaction
 `npx db-migration up` or `./node_modules/db-migrate/bin/db-migrate up`
 
 ##### Start the server
-`yarn start` starts the server on port 3000
+`yarn start` starts the server on port 4000
 
 ### Client instructions
 
@@ -34,7 +34,10 @@ The goal of the project is to learn how to fully replace redux with new reaction
 `yarn install`
 
 ##### Start the client
-`yarn start` starts the server on port 4000
+`yarn start` starts the client on port 3000
+- Go to http://localhost:3000
+- email: `rodgarcialima@gmail.com`
+- password: `rod123`
 
 ### Author
 Rodrigo Lima (rodgarcialima@gmail.com)
