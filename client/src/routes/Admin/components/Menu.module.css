@@ -1,0 +1,9 @@
+.arrow {
+  transform: rotate(0deg);
+  transition: transform 100ms linear;
+}
+
+.arrow.open {
+  transform: rotate(90deg);
+  transition: transform 100ms linear;
+}

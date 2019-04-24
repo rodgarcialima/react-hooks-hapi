@@ -1,0 +1,30 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  grid-template-rows: 50px 1fr 30px;
+  grid-template-areas:
+    "sidenav header"
+    "sidenav main"
+    "sidenav footer";
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+}
+
+.sidenav {
+  grid-area: sidenav;
+  display: flex;
+}
+
+.main {
+  grid-area: main;
+  display: flex;
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+}

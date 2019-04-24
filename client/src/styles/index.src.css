@@ -1,0 +1,26 @@
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;
+
+/* Our global css goes here */
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Using tailwind css configs inside css */
+/* .text-purple-50 {
+  color: color(config("colors.purple") a(50%));
+} */
