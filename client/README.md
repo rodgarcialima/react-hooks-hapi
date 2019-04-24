@@ -25,9 +25,3 @@
   "editor.formatOnSave": true,
   "editor.tabSize": 2
   ```
-
-### Environment file
- - Create `.env` file on project root and add:
-   ```
-   NODE_PATH=src/
-   ```
