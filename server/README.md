@@ -35,7 +35,7 @@ You can learn more reading https://db-migrate.readthedocs.io/en/latest/
 ##### To create a new migration
 
 `npx db-migrate create your_migration_name` then copy the methods `up` and `down`
-from `smt-server/migrations/20190423105906-default-users` users migration file as base
+from `server/migrations/20190423105906-default-users` users migration file as base
 to write your own migrations.
 
 ##### To revert N migrations
