@@ -1,20 +1,50 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
+import { withRouter } from "react-router-dom";
 import Gravatar from "react-gravatar";
 
 // Local
 import { GlobalContext } from "App";
+import { DropdownMenu, DropdownMenuItem } from "components/DropdownMenu";
 
-export const Header = () => {
+export const Header = ({ history }) => {
+  const [open, setOpen] = useState(false);
   const { auth } = useContext(GlobalContext);
 
   const renderProfile = () => {
     return (
-      <div className="flex">
+      <div className="flex flex-col justify-center">
         <Gravatar
-          className="rounded-full self-center mr-2 cursor-pointer"
+          className="rounded-full mr-2 cursor-pointer self-end"
           email={auth.user.email}
           size={40}
+          onClick={event => {
+            setOpen(!open);
+          }}
         />
+        <DropdownMenu
+          open={open}
+          width="w-24"
+          onClose={() => {
+            setOpen(false);
+          }}
+        >
+          <DropdownMenuItem
+            onClick={() => {
+              history.push("/admin/profile");
+              setOpen(false);
+            }}
+          >
+            Profile
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => {
+              history.push("/admin/signout");
+              setOpen(false);
+            }}
+          >
+            Sign out
+          </DropdownMenuItem>
+        </DropdownMenu>
       </div>
     );
   };
@@ -27,4 +57,4 @@ export const Header = () => {
   );
 };
 
-export default Header;
+export default withRouter(Header);

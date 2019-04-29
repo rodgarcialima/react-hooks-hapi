@@ -16,13 +16,12 @@ import Customers from "./pages/Customers";
 import Settings from "./pages/Settings";
 import About from "./pages/About";
 import Aws from "./pages/Aws";
-import Signout from "./pages/Signout";
 import AwsUsage from "./reports/AwsUsage";
 import { GlobalContext } from "App";
 import { REFRESH_TOKEN_INTERVAL } from "consts";
 import { http } from "helpers/axios";
 import { dateExpired } from "helpers/token";
-import { ACTION_REFRESH_TOKEN } from "reducer/actions/auth";
+import { ACTION_REFRESH_TOKEN, ACTION_LOGOUT } from "reducer/actions/auth";
 
 // Default menu config
 const iconSize = 18;
@@ -86,13 +85,6 @@ const menu = [
     label: "About",
     icon: <MdInfo size={iconSize} color={iconColor} />,
     link: "/admin/about"
-  },
-  {
-    id: uuidv4(),
-    type: "item",
-    label: "Sign out",
-    icon: <FaSignOutAlt size={iconSize} color={iconColor} />,
-    link: "/admin/signout"
   }
 ];
 
@@ -143,7 +135,13 @@ export const Admin = () => {
               <Route path="/admin/settings" component={Settings} />
               <Route path="/admin/about" component={About} />
               <Route path="/admin/reports/aws_usage" component={AwsUsage} />
-              <Route path="/admin/signout" component={Signout} />
+              <Route
+                path="/admin/signout"
+                component={() => {
+                  dispatch({ type: ACTION_LOGOUT });
+                  return <Redirect to="/login" />;
+                }}
+              />
               <Dashboard />
             </Switch>
           </main>
