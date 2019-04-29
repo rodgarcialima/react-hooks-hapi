@@ -4,7 +4,7 @@ Template project with React (with Hooks) and HapiJS
 The goal of the project is to learn how to fully replace redux with new reaction hooks and create a blueprint for future projects.
 
 ### Features
-- Redux was replaced by React Hooks (useContext, usetState, useDispatch, useRef, useEffect)
+- Redux was replaced by React Hooks (useContext, usetState, useRef, useEffect)
 - Authentication with JWT tokens
 - Using immer for changing state (https://github.com/immerjs/immer)
 - Using tailwindcss for CSS (https://github.com/tailwindcss/tailwindcss)
