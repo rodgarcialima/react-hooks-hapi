@@ -12,6 +12,9 @@ export const DropdownMenuItem = ({ onClick, children }) => {
   );
 };
 
+/**
+ * Inspiration: https://codesandbox.io/s/9o3lw5792w
+ */
 export const DropdownMenu = ({ width = "w-24", open, onClose, children }) => {
   const node = useRef();
 

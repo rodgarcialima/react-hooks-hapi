@@ -3,7 +3,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import uuidv4 from "uuid/v4";
 
 // Icons
-import { FaCogs, FaSignOutAlt } from "react-icons/fa";
+import { FaCogs } from "react-icons/fa";
 import { MdDashboard, MdSettings, MdInfo, MdPrint } from "react-icons/md";
 
 // Local
